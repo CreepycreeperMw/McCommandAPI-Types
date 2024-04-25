@@ -1,7 +1,7 @@
 import { MinecraftCommandOptions } from "./CommandOption"
 import { CommandResponse } from "./CommandResponse"
 import { CommandSender } from "./CommandSender"
-import { System } from "./System"
+import { System } from "../System"
 
 export class Command {
     /**
@@ -29,10 +29,6 @@ export class Command {
      * Wether the command requires cheats to be toggled on.
      */
     public readonly requires_cheats: boolean
-    /**
-     * Wether the command requires cheats to be toggled on.
-     */
-    public readonly overloads: Overload[]
     
     /**
      * Sets the executor function of this command that is called when the command is run
@@ -123,7 +119,7 @@ export class Overload {
      * syntax and contains a list of parameters.
      * @param params The Parameters for this overload.
      */
-    constructor(...params: OverloadParam[])
+    constructor(params?: OverloadParam[])
 
     /**
      * The list of command parameters of this overload
@@ -145,6 +141,6 @@ export class Overload {
 
 export interface OverloadParam {
     name: string
-    type: keyof typeof MinecraftCommandOptions
+    type: string | MinecraftCommandOptions
     optional: boolean
 }

@@ -41,5 +41,5 @@ export enum CommandStatus {
      * syntax, such as a target selector that does not match anything
      * or executing a command its not permitted to.
      */
-    INCORRECT_INPUT = -2147352576
+    INCORRECT_ARGS = -2147352576
 }
