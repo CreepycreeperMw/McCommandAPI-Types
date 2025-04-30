@@ -23,7 +23,7 @@ Tho this brings major downsides with it such as:
 
  This system is based on years of approaches to command handlers from all of Minecraft and other communities.
  
- Note: This is **not an implementation** but the ___types___ / -docs for an api.
+ Note: This is **not an implementation** but the ___types___ / -docs for a possible api implementation.
 
 # Important Notes
 - This is NOT meant to be the final version of the api
